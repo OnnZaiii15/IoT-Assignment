@@ -1,1 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Nursery Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="app-header">
+      <div>
+        <p class="eyebrow">Smart Agriculture for Plant Nursery</p>
+        <h1>Nursery IoT Control</h1>
+      </div>
+      <div class="header-panel">
+        <div class="status-pill live"><span class="pulse"></span>Live</div>
+        <div id="timestamp" class="timestamp">--</div>
+        <div id="connectionBadge" class="badge badge-online">Online</div>
+      </div>
+    </header>
+
+    <section class="section section-sensors">
+      <div class="section-header">
+        <h2>Environmental Sensors</h2>
+        <p>Realtime readings from the nursery environment</p>
+      </div>
+      <div id="sensorGrid" class="sensor-grid"></div>
+    </section>
+
+    <section class="section section-actuators">
+      <div class="section-header">
+        <h2>Actuator Control Panel</h2>
+        <p>Manual override controls for pumps, lights, fans, and sprays</p>
+      </div>
+      <div id="actuatorPanel" class="actuator-grid"></div>
+    </section>
+
+    <section class="section section-chart-alerts">
+      <div class="chart-card">
+        <div class="section-header">
+          <h2>Environmental Trends</h2>
+          <p>Temperature and humidity over time</p>
+        </div>
+        <canvas id="trendChart"></canvas>
+      </div>
+      <div class="alerts-card">
+        <div class="section-header">
+          <h2>Alerts</h2>
+          <p>Notifications for warning conditions</p>
+        </div>
+        <div id="alertsList" class="alerts-list"></div>
+      </div>
+    </section>
+
+    <section class="section section-emulator">
+      <details class="emulator-panel" open>
+        <summary>
+          <div>
+            <h2>Sensor Emulator</h2>
+            <p>Adjust values and send emulated data to Firebase</p>
+          </div>
+        </summary>
+        <div class="emulator-grid" id="emulatorGrid"></div>
+        <div class="emulator-actions">
+          <button id="sendEmulatedData" class="primary-btn">Send Emulated Data</button>
+          <div class="emulator-note">The emulator pushes live values to Firebase and updates the dashboard.</div>
+        </div>
+      </details>
+    </section>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
 
