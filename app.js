@@ -11,13 +11,13 @@ import {
 } from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js';
 
 const firebaseConfig = {
-  apiKey: 'YOUR_API_KEY',
-  authDomain: 'YOUR_AUTH_DOMAIN',
-  databaseURL: 'YOUR_DATABASE_URL',
-  projectId: 'YOUR_PROJECT_ID',
-  storageBucket: 'YOUR_STORAGE_BUCKET',
-  messagingSenderId: 'YOUR_MESSAGING_SENDER_ID',
-  appId: 'YOUR_APP_ID'
+  apiKey: 'AIzaSyDXqutakIGnpNPEPXIveXalQM7Uae763r0',
+  authDomain: 'assignment-fb63f.firebaseapp.com',
+  databaseURL: 'https://assignment-fb63f-default-rtdb.firebaseio.com',
+  projectId: 'assignment-fb63f',
+  storageBucket: 'assignment-fb63f.firebasestorage.app',
+  messagingSenderId: '601140636499',
+  appId: '1:601140636499:web:b2be045e13b60db9210fa6'
 };
 
 const app = initializeApp(firebaseConfig);
